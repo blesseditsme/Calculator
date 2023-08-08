@@ -12,25 +12,25 @@ public class Operations {
 
     public static void addingSign(JTextField textField) {
         num1 = Double.parseDouble(textField.getText());
-        operator =  '+';
+        operator = '+';
         textField.setText("");
     }
 
     public static void subtractingSign(JTextField textField) {
         num1 = Double.parseDouble(textField.getText());
-        operator =  '-';
+        operator = '-';
         textField.setText("");
     }
 
     public static void multiplyingSign(JTextField textField) {
         num1 = Double.parseDouble(textField.getText());
-        operator =  '*';
+        operator = '*';
         textField.setText("");
     }
 
     public static void divisionSign(JTextField textField) {
         num1 = Double.parseDouble(textField.getText());
-        operator =  '/';
+        operator = '/';
         textField.setText("");
     }
 
@@ -63,10 +63,15 @@ public class Operations {
     }
 
     public static void negativeButton(JTextField textField) {
-        if(textField.getText().isEmpty() || textField.getText().contains("-")) {
+        if(textField.getText().isEmpty()) {
             textField.setText("-");
             return;
         }
+        if(textField.getText().contains("-") && textField.getText().length() < 2) {
+            textField.setText("");
+            return;
+        }
+
         double temp = Double.parseDouble(textField.getText());
         temp *= -1;
         textField.setText(String.valueOf(temp));
