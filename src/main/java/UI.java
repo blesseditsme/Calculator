@@ -17,7 +17,7 @@ public class UI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 550);
         frame.setLayout(null);
-        frame.setLocation(600, 250);
+        frame.setLocationRelativeTo(null);
         frame.setResizable(false);
 
         textField = new JTextField();
@@ -25,15 +25,51 @@ public class UI {
         textField.setFont(myFont);
         textField.setEditable(false);
 
-        addButton = new JButton("+");
-        subButton = new JButton("-");
-        mulButton = new JButton("*");
-        divButton = new JButton("/");
-        decButton = new JButton(".");
-        equButton = new JButton("=");
-        delButton = new JButton("Del");
-        clrButton = new JButton("Clr");
-        negButton = new JButton("-n");
+        addButton = new JButton();
+        addButton.setContentAreaFilled(false);
+        addButton.setBorderPainted(false);
+        addButton.setIcon(new ImageIcon("src/main/images/icons8-plus-math-40.png"));
+
+        subButton = new JButton();
+        subButton.setContentAreaFilled(false);
+        subButton.setBorderPainted(false);
+        subButton.setIcon(new ImageIcon("src/main/images/icons8-subtract-40.png"));
+
+        mulButton = new JButton();
+        mulButton.setContentAreaFilled(false);
+        mulButton.setBorderPainted(false);
+        mulButton.setIcon(new ImageIcon("src/main/images/icons8-multiply-40.png"));
+
+        divButton = new JButton();
+        divButton.setContentAreaFilled(false);
+        divButton.setBorderPainted(false);
+        divButton.setIcon(new ImageIcon("src/main/images/icons8-divide-40.png"));
+
+        decButton = new JButton();
+        decButton.setContentAreaFilled(false);
+        decButton.setBorderPainted(false);
+        decButton.setIcon(new ImageIcon("src/main/images/icons8-dot-10.png"));
+
+        equButton = new JButton();
+        equButton.setContentAreaFilled(false);
+        equButton.setBorderPainted(false);
+        equButton.setIcon(new ImageIcon("src/main/images/icons8-equal-sign-40.png"));
+
+        delButton = new JButton();
+        delButton.setContentAreaFilled(false);
+        delButton.setBorderPainted(false);
+        delButton.setIcon(new ImageIcon("src/main/images/icons8-clear-40.png"));
+
+        clrButton = new JButton();
+        clrButton.setContentAreaFilled(false);
+        clrButton.setBorderPainted(false);
+        clrButton.setIcon(new ImageIcon("src/main/images/icons8-delete-40.png"));
+
+        negButton = new JButton();
+        negButton.setContentAreaFilled(false);
+        negButton.setBorderPainted(false);
+        negButton.setIcon(new ImageIcon("src/main/images/icons8-plus-slash-minus-40.png"));
+
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
@@ -56,6 +92,8 @@ public class UI {
             numberButtons[i].addActionListener(actionListener);
             numberButtons[i].setFont(myFont);
             numberButtons[i].setFocusable(false);
+            numberButtons[i].setContentAreaFilled(false);
+            numberButtons[i].setBorderPainted(false);
         }
 
         negButton.setBounds(50, 430, 100, 50);
@@ -65,7 +103,6 @@ public class UI {
         panel = new JPanel();
         panel.setBounds(50,100,300, 300);
         panel.setLayout(new GridLayout(4, 4, 10, 10));
-        // panel.setBackground(Color.GRAY);
 
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
