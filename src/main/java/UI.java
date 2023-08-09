@@ -10,7 +10,7 @@ public class UI {
     static JButton addButton, subButton, mulButton, divButton,
             decButton, equButton, delButton, clrButton, negButton;
     JPanel panel;
-    Font myFont = new Font("Times New Roman", Font.PLAIN, 30);
+    Font myFont = new Font(Font.SERIF, Font.PLAIN, 30);
 
     UI(ActionListener actionListener) {
         frame = new JFrame("Calculator");
@@ -21,9 +21,11 @@ public class UI {
         frame.setResizable(false);
 
         textField = new JTextField();
-        textField.setBounds(50, 25, 300, 50);
+        textField.setBounds(60, 25, 280, 50);
         textField.setFont(myFont);
         textField.setEditable(false);
+        textField.setBorder(BorderFactory.createMatteBorder(0,0,1,0, Color.BLACK));
+        textField.setCaretColor(Color.LIGHT_GRAY);
 
         addButton = new JButton();
         addButton.setContentAreaFilled(false);
@@ -103,6 +105,7 @@ public class UI {
         panel = new JPanel();
         panel.setBounds(50,100,300, 300);
         panel.setLayout(new GridLayout(4, 4, 10, 10));
+        textField.setCaretColor(panel.getBackground());
 
         panel.add(numberButtons[1]);
         panel.add(numberButtons[2]);
