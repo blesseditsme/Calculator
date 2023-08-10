@@ -19,6 +19,7 @@ public class UI {
         frame.setLayout(null);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
+        frame.setIconImage(new ImageIcon("src/main/images/icons8-calculator-47.png").getImage());
 
         textField = new JTextField();
         textField.setBounds(60, 25, 280, 50);
@@ -98,9 +99,9 @@ public class UI {
             numberButtons[i].setBorderPainted(false);
         }
 
-        negButton.setBounds(50, 430, 100, 50);
-        delButton.setBounds(150, 430, 100, 50);
-        clrButton.setBounds(250, 430, 100, 50);
+        negButton.setBounds(50, 415, 100, 50);
+        delButton.setBounds(150, 415, 100, 50);
+        clrButton.setBounds(250, 415, 100, 50);
 
         panel = new JPanel();
         panel.setBounds(50,100,300, 300);
