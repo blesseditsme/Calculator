@@ -9,6 +9,8 @@ public class UI {
     static JButton[] functionButtons = new JButton[9];
     static JButton addButton, subButton, mulButton, divButton,
             decButton, equButton, delButton, clrButton, negButton;
+    final Taskbar taskbar = Taskbar.getTaskbar();
+
     JPanel panel;
     Font myFont = new Font(Font.SERIF, Font.PLAIN, 30);
 
@@ -20,6 +22,7 @@ public class UI {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setIconImage(new ImageIcon("src/main/images/icons8-calculator-47.png").getImage());
+        taskbar.setIconImage(new ImageIcon("src/main/images/icons8-calculator-47.png").getImage());
 
         textField = new JTextField();
         textField.setBounds(60, 25, 280, 50);
